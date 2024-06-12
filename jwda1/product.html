@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        /* beberapa styling sederhana */
+        .sidebar {
+            height: 100vh;
+            background-color: #f8f9fa;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-light py-3 mb-4">
+        <div class="container">
+            <h1 class="m-0">JWD-A</h1>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">
+                                Beranda
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="product.html">
+                                Product
+                            </a>
+                        </li>
+                       
+                    </ul>
+                </div>
+            </nav>
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+               
+                <div class="content">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Tambah Data
+                    </button>
+                    
+                    <!-- Modal -->
+                    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Produk</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="product-code" class="form-label">Kode Produk</label>
+                        <input type="text" class="form-control" id="product-code" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="product-name" class="form-label">Nama Produk</label>
+                        <input type="text" class="form-control" id="product-name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="product-price" class="form-label">Harga Produk</label>
+                        <input type="number" class="form-control" id="product-price" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="product-quantity" class="form-label">Jumlah Produk</label>
+                        <input type="number" class="form-control" id="product-quantity" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="product-image" class="form-label">Foto Produk</label>
+                        <input type="file" class="form-control" id="product-image" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="product-description" class="form-label">Deskripsi Produk</label>
+                        <textarea class="form-control" id="product-description" rows="3" required></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                <button type="button" class="btn btn-primary">Simpan</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="table-responsive mt-4">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Kode Produk</th>
+                <th scope="col">Nama Produk</th>
+                <th scope="col">Harga Produk</th>
+                <th scope="col">Jumlah Produk</th>
+                <th scope="col">Foto Produk</th>
+                <th scope="col">Deskripsi Produk</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>Produk A</td>
+                <td>100000</td>
+                <td>10</td>
+                <td><img src="assets/image/p1.jpeg" alt="Produk A" width="50"></td>
+                <td>Deskripsi singkat tentang Produk A.</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Produk B</td>
+                <td>200000</td>
+                <td>20</td>
+                <td><img src="assets/image/p2.jpeg" alt="Produk B" width="50"></td>
+                <td>Deskripsi singkat tentang Produk B.</td>
+            </tr>
+            <!-- Tambahkan data produk lainnya di sini -->
+        </tbody>
+    </table>
+</div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p class="m-0">© 2024 Fahry</p>
+        </div>
+    </footer>
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>
